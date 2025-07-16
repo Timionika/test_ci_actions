@@ -1,0 +1,28 @@
+[project]
+
+name = "mlbcountswebapp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.0",
+    "gspread>=6.1.4",
+    "gunicorn>=23.0.0",
+    "pandas>=2.2.3",
+    "pymongo>=4.10.1",
+    "requests>=2.32.3",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "Q", "YTT"]
+ignore = ["E501", "E402"]  # игнорировать длинные строки и импорты вверху
+
+[tool.ruff.format]
+# Настройки форматирования (по желанию)
+docstring-code-format = true  # форматировать код внутри docstrings
+quote-style = "double"        # стиль кавычек
+line-ending = "auto"          # стиль окончания строк: auto, lf, crlf

@@ -13,36 +13,36 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Department',
+            name="Department",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('stage', models.PositiveIntegerField()),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255)),
+                ("stage", models.PositiveIntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='Office',
+            name="Office",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('short_name', models.CharField(max_length=255)),
-                ('address', models.CharField(max_length=255)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("short_name", models.CharField(max_length=255)),
+                ("address", models.CharField(max_length=255)),
             ],
         ),
         migrations.CreateModel(
-            name='Employee',
+            name="Employee",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('fio', models.CharField(max_length=255)),
-                ('job', models.CharField(max_length=255)),
-                ('phone', models.CharField(max_length=20, null=True)),
-                ('burn', models.DateField(null=True)),
-                ('email', models.EmailField(max_length=254, null=True)),
-                ('department', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='employees', to='company.department')),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("fio", models.CharField(max_length=255)),
+                ("job", models.CharField(max_length=255)),
+                ("phone", models.CharField(max_length=20, null=True)),
+                ("burn", models.DateField(null=True)),
+                ("email", models.EmailField(max_length=254, null=True)),
+                ("department", models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name="employees", to="company.department")),
             ],
         ),
         migrations.AddField(
-            model_name='department',
-            name='office',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='departments', to='company.office'),
+            model_name="department",
+            name="office",
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name="departments", to="company.office"),
         ),
     ]

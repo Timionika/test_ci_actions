@@ -11,9 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
-import os
 
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -138,9 +137,9 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
 )
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '90450042912-6gprtmvklpvd79eekch6agg6j99bgc3f.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "90450042912-6gprtmvklpvd79eekch6agg6j99bgc3f.apps.googleusercontent.com"
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "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"
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = 'http://localhost:8000/complete/google-oauth2/'
+SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = "http://localhost:8000/complete/google-oauth2/"
 
 LOGIN_REDIRECT_URL = "/company/"
